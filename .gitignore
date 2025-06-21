@@ -1,0 +1,42 @@
+# Ignore executable and build output files
+*.exe
+*.exp
+*.lib
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python virtual environments
+env/
+venv/
+ENV/
+.venv/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Compiled CUDA objects
+*.o
+*.obj
+*.ptx
+*.cubin
+
+# Ignore folders named
