@@ -40,3 +40,4 @@ ENV/
 *.cubin
 
 # Ignore folders named
+lib/

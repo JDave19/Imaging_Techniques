@@ -6,14 +6,12 @@ This code implements a real-time low-light image enhancement algorithm using CUD
 ## 🛠️ Folder Structure
 
 ```
-├── lle.cu             # CUDA-based enhancement implementation
-├── lle.ipynb          # Python-based enhancement implemntation for video
-├── lle\_plot.ipynb    # Python notebook to visualize enhancement factors
-├── low\_light\_img.jpg   # Sample input image
-└── README.md           # This file
-
+├── lle.cu                # CUDA-based enhancement implementation
+├── lle.ipynb             # Python-based enhancement implemntation for video
+├── lle_plot.ipynb        # Python notebook to visualize enhancement factors
+├── low_light_img.jpg     # Sample input image
+└── README.md             # This file
 ````
-
 ---
 
 ## 📸 Problem Overview
@@ -43,7 +41,7 @@ D(x, y) = 255 - min{R(x,y), G(x,y), B(x,y)}
 ### 4. **Enhancement Factor Computation**
 
 ```cpp
-factor = 1 + ((z / (255 * m)) * A_s(x, y))^2
+factor = 1 + ((z / (255 * m)) * A_s(x, y))^4
 ```
 
 Where:
@@ -70,6 +68,7 @@ factor = 1 + ((z / (255 * m)) * (255 - min(R, G, B)))^4
 ```
 
 * Different settings of `z` and `m` are compared.
+* Experiments can be done with different powers such as 2, 3, and 5. 
 * This visualization guides parameter tuning for best enhancement quality.
 
 ![plot](./enhacement_factor.png)
